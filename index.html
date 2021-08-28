@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lift Simulation</title>
+</head>
+<body>
+    <header>
+        <h1>Lift Simulation</h1>
+    </header>
+
+    <main id="container">
+        <div id="lift-container">
+            <img src="img/elevator.png" alt="" height="100px" width="75px" 
+            style="padding: 3px;">
+        </div>
+        
+        <div>
+            <div class="floor">
+                <div class="floor-content">
+                    <button class="down-btn" onclick="moveToFloorFour()">Down</button>
+                    <h4>Floor 4</h4>
+                </div>
+                <hr>
+            </div>
+    
+            <div class="floor">
+                <div class="floor-content">
+                    <button class="up-btn" onclick="moveToFloorThree()">Up</button>
+                    <button class="down-btn" onclick="moveToFloorThree()">Down</button>
+                    <h4>Floor 3</h4>
+                </div>
+                <hr>
+            </div>
+    
+            <div class="floor">
+                <div class="floor-content">
+                    <button class="up-btn" onclick="moveToFloorTwo()">Up</button>
+                    <button class="down-btn" onclick="moveToFloorTwo()">Down</button>
+                    <h4>Floor 2</h4>
+                </div>
+                <hr>
+            </div>
+    
+            <div class="floor">
+                <div class="floor-content">
+                    <button class="up-btn" onclick="moveToFloorOne()">Up</button>
+                    <h4>Floor 1</h4>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Link for the Github <a href="http://" target="_blank" rel="noopener noreferrer">repo</a></p>
+    </footer>
+
+    <script src="lift_mechanics.js"></script>
+</body>
+</html>
