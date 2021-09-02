@@ -1,64 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Lift Simulation</title>
-</head>
-<body>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/lift_favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/lift_favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/lift_favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body>
     <header>
         <h1>Lift Simulation</h1>
     </header>
 
     <main id="container">
-        <div id="lift-container">
-            <img src="img/elevator.png" alt="" height="100px" width="75px" 
-            style="padding: 3px;">
+        <div class="level9" >
+            <button id="floor9" class="down-btn">Down</button>
+            <h4>Floor 9</h4>
         </div>
-        
-        <div>
-            <div class="floor">
-                <div class="floor-content">
-                    <button class="down-btn" onclick="moveToFloorFour()">Down</button>
-                    <h4>Floor 4</h4>
-                </div>
-                <hr>
-            </div>
-    
-            <div class="floor">
-                <div class="floor-content">
-                    <button class="up-btn" onclick="moveToFloorThree()">Up</button>
-                    <button class="down-btn" onclick="moveToFloorThree()">Down</button>
-                    <h4>Floor 3</h4>
-                </div>
-                <hr>
-            </div>
-    
-            <div class="floor">
-                <div class="floor-content">
-                    <button class="up-btn" onclick="moveToFloorTwo()">Up</button>
-                    <button class="down-btn" onclick="moveToFloorTwo()">Down</button>
-                    <h4>Floor 2</h4>
-                </div>
-                <hr>
-            </div>
-    
-            <div class="floor">
-                <div class="floor-content">
-                    <button class="up-btn" onclick="moveToFloorOne()">Up</button>
-                    <h4>Floor 1</h4>
-                </div>
-                <hr>
-            </div>
+
+        <div class="level8">
+                <button id="floor8" class="up-btn">Up</button>
+                <button id="floor8" class="down-btn">Down</button>
+            <h4>Floor 8</h4>
         </div>
+
+        <div class="level7">
+            <button id="floor7" class="up-btn">Up</button>
+            <button id="floor7" class="down-btn">Down</button>
+            <h4>Floor 7</h4>
+        </div>
+
+        <div class="level6">
+            <button id="floor6" class="up-btn">Up</button>
+            <button id="floor6" class="down-btn">Down</button>
+            <h4>Floor 6</h4>
+        </div>
+
+        <div class="level5">
+            <button id="floor5" class="up-btn">Up</button>
+            <button id="floor5" class="down-btn">Down</button>
+            <h4>Floor 5</h4>
+        </div>
+            
+        <div class="level4">
+            <button id="floor4" class="up-btn">Up</button>
+            <button id="floor4" class="down-btn">Down</button>
+            <h4>Floor 4</h4>
+        </div>
+
+        <div class="level3">
+            <button id="floor3" class="up-btn">Up</button>
+            <button id="floor3" class="down-btn">Down</button>
+            <h4>Floor 3</h4>
+        </div>
+
+        <div class="level2">
+            <button id="floor2" class="up-btn">Up</button>
+            <button id="floor2" class="down-btn">Down</button>
+            <h4>Floor 2</h4>
+        </div>
+
+        <div class="level1">
+            <button id="floor1" class="up-btn">Up</button>
+            <button id="floor1" class="down-btn">Down</button>
+            <h4>Floor 1</h4>
+        </div>
+
+        <div class="level0">
+            <button id="floor0" class="down-btn">Up</button>
+            <h4>Floor G</h4>
+        </div>
+
+        <span id="lift-container">
+            <img src="img/elevator.png" alt="" height="100px" width="75px">
+        </span>
     </main>
 
     <footer>
         <p>Link for the Github <a href="https://github.com/rohan09-raj/lift-simulation-rohan.git" target="_blank" rel="noopener noreferrer">repo</a></p>
     </footer>
-
+    
     <script src="lift_mechanics.js"></script>
-</body>
+  </body>
 </html>

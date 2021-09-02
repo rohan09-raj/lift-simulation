@@ -1,69 +1,40 @@
-const FLOOR_1 = 720;
-const FLOOR_2 = 515;
-const FLOOR_3 = 310;
-const FLOOR_4 = 100;
+const lift = document.getElementById('lift-container');
+const callLift = document.querySelectorAll('button');
 
-var pos = FLOOR_1;
-var lift = document.getElementById('lift-container');
-
-function moveToFloorOne() {
-	var anim = setInterval(animate, 5);
-
-	function animate() {
-		if(pos == FLOOR_1) {
-			clearInterval(anim);
-		} else {
-			pos++;
-			lift.style.top = pos + "px";
-		}
-	}
+function moveLift(element){
+  switch(element.id){
+	case 'floor9':
+    lift.style.bottom='100%';
+    break;
+	case 'floor8':
+    lift.style.bottom='90%';
+    break;
+	case 'floor7':
+    lift.style.bottom='80%';
+    break;
+	case 'floor6':
+    lift.style.bottom='70%';
+    break;
+	case 'floor5':
+    lift.style.bottom='60%';
+    break;
+	case 'floor4':
+    lift.style.bottom='50%';
+    break;
+  case 'floor3':
+    lift.style.bottom='40%';
+    break;
+  case 'floor2':
+    lift.style.bottom='30%';
+    break;
+  case 'floor1':
+    lift.style.bottom='20%';
+    break;
+  default:
+    lift.style.bottom='10%';
+  }
 }
 
-function moveToFloorTwo() {
-	var anim = setInterval(animate, 5);
-
-	function animate() {
-		if(pos == FLOOR_2) {
-			clearInterval(anim);
-		} else {
-			if(lift.style.top < FLOOR_2 + "px") {
-				pos++;
-				lift.style.top = pos + "px";
-			} else {
-				pos--;
-				lift.style.top = pos + "px";
-			}
-		}
-	}
-}
-
-function moveToFloorThree() {
-	var anim = setInterval(animate, 5);
-
-	function animate() {
-		if(pos == FLOOR_3) {
-			clearInterval(anim);
-		} else {
-			if(lift.style.top < FLOOR_3 + "px") {
-				pos++;
-				lift.style.top = pos + "px";
-			} else {
-				pos--;
-				lift.style.top = pos + "px";
-			}
-		}
-	}
-}
-
-function moveToFloorFour() {
-	var anim = setInterval(animate, 5);
-
-	function animate() {
-		if(pos == FLOOR_4) {
-			clearInterval(anim);
-		} else {
-			pos--;
-			lift.style.top = pos + "px";
-		}
-	}
-}
+callLift.forEach(btn => btn.addEventListener('click',(move)=>{
+  moveLift(move.target);
+}))
