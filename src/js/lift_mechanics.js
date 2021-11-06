@@ -2,48 +2,66 @@ const lift = document.getElementById('lift-container');
 const callLift = document.querySelectorAll('button');
 const leftDoor = document.getElementById('left-door');
 const rightDoor = document.getElementById('right-door');
+var floors = [0];
+let pointer = 1;
 
 function moveLift(element){
-  switch(element.id){
-	case 'floor9':
-    lift.style.bottom = '100%';
-    removeAnimation();
-    break;
-	case 'floor8':
-    lift.style.bottom = '90%';
-    removeAnimation();
-    break;
-	case 'floor7':
-    lift.style.bottom = '80%';
-    removeAnimation();
-    break;
-	case 'floor6':
-    lift.style.bottom = '70%';
-    removeAnimation();
-    break;
-	case 'floor5':
-    lift.style.bottom = '60%';
-    removeAnimation();
-    break;
-	case 'floor4':
-    lift.style.bottom = '50%';
-    removeAnimation();
-    break;
-  case 'floor3':
-    lift.style.bottom = '40%';
-    removeAnimation();
-    break;
-  case 'floor2':
-    lift.style.bottom = '30%';
-    removeAnimation();  
-    break;
-  case 'floor1':
-    lift.style.bottom = '20%';
-    removeAnimation();
-    break;
-  default:
-    lift.style.bottom = '10%';
-    removeAnimation();
+  var currentFloor = parseInt(element.id);
+  floors.push(currentFloor + 1);
+  var duration = Math.abs(floors[pointer] - floors[pointer-1]) * 2;
+  pointer++;
+  var transitionDuration = duration + 's';
+
+  switch (element.id) {
+    case '9':
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '100%';
+      removeAnimation();
+      break;
+    case '8':
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '90%';
+      removeAnimation();
+      break;
+    case '7':
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '80%';
+      removeAnimation();
+      break;
+    case '6':
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '70%';
+      removeAnimation();
+      break;
+    case '5':
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '60%';
+      removeAnimation();
+      break;
+    case '4':
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '50%';
+      removeAnimation();
+      break;
+    case '3':
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '40%';
+      removeAnimation();
+      break;
+    case '2':
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '30%';
+      removeAnimation();  
+      break;
+    case '1':
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '20%';
+      removeAnimation();
+      break;
+    default:
+      lift.style.transitionDuration = transitionDuration;
+      lift.style.bottom = '10%';
+      removeAnimation();
   }
 }
 
@@ -62,6 +80,6 @@ var anime = function doorAnimation() {
   });
 }
 
-callLift.forEach(btn => btn.addEventListener('click',(move)=>{
+callLift.forEach(btn => btn.addEventListener('click', (move) => {
   moveLift(move.target);
-}))
+}));
