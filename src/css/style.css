@@ -26,6 +26,53 @@ h1 {
     transition-duration: 3s;
 }
 
+.lift {
+    margin: 0 5vw;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #121212;
+    bottom: 5%;
+    height: 100px;
+    width: 80px;
+}
+
+@keyframes openingDoor {
+    from {
+        width: 34px;
+    }
+
+    to {
+        width: 0px;
+    }
+}
+
+@keyframes closingDoor {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 34px;
+    }
+}
+
+#left-door {
+    margin: 4.5px;
+    height: 90px;
+    width: 34px;
+    background-color: #a19f9f;
+}
+
+#right-door {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 4.5px;
+    height: 90px;
+    width: 34px;
+    background-color: rgb(77, 75, 76);
+}
+
 .level0 {
     display: flex;
     position: absolute;
