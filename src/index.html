@@ -1,113 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link Tags -->
+    <link href="http://fonts.cdnfonts.com/css/fredoka-one" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon.ico" />
+
+    <!-- Title -->
     <title>Lift Simulation</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/lift_favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/lift_favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/lift_favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <header>
-      <h1>Lift Simulation</h1>
+    <header class="header">
+      <h1 class="header__heading">Lift Simulation</h1>
+      <hr class="divider" />
     </header>
 
-    <main id="container">
-      <div class="level9">
-        <button id="9" class="down-btn">Down</button>
-        <h4>Floor 9</h4>
-      </div>
-
-      <div class="level8">
-        <button id="8" class="up-btn">Up</button>
-        <button id="8" class="down-btn">Down</button>
-        <h4>Floor 8</h4>
-      </div>
-
-      <div class="level7">
-        <button id="7" class="up-btn">Up</button>
-        <button id="7" class="down-btn">Down</button>
-        <h4>Floor 7</h4>
-      </div>
-
-      <div class="level6">
-        <button id="6" class="up-btn">Up</button>
-        <button id="6" class="down-btn">Down</button>
-        <h4>Floor 6</h4>
-      </div>
-
-      <div class="level5">
-        <button id="5" class="up-btn">Up</button>
-        <button id="5" class="down-btn">Down</button>
-        <h4>Floor 5</h4>
-      </div>
-
-      <div class="level4">
-        <button id="4" class="up-btn">Up</button>
-        <button id="4" class="down-btn">Down</button>
-        <h4>Floor 4</h4>
-      </div>
-
-      <div class="level3">
-        <button id="3" class="up-btn">Up</button>
-        <button id="3" class="down-btn">Down</button>
-        <h4>Floor 3</h4>
-      </div>
-
-      <div class="level2">
-        <button id="2" class="up-btn">Up</button>
-        <button id="2" class="down-btn">Down</button>
-        <h4>Floor 2</h4>
-      </div>
-
-      <div class="level1">
-        <button id="1" class="up-btn">Up</button>
-        <button id="1" class="down-btn">Down</button>
-        <h4>Floor 1</h4>
-      </div>
-
-      <div class="level0">
-        <button id="0" class="down-btn">Up</button>
-        <h4>Floor G</h4>
-      </div>
-
-      <span id="lift-container">
-        <div class="lift">
-          <div id="left-door"></div>
-          <div id="right-door"></div>
+    <section class="control">
+      <h3 class="control__title">Control Input</h3>
+      <form action="" method="post" class="control__form" id="form">
+        <div class="control--floor-input">
+          <label for="floors">No of Floors : </label>
+          <input
+            type="number"
+            min="1"
+            max="15"
+            name="floors"
+            value="4"
+            id="input-floors"
+          />
         </div>
-      </span>
-    </main>
+        <div class="control--lift-input">
+          <label for="lifts">No of Lifts : </label>
+          <input
+            type="number"
+            min="1"
+            max="5"
+            name="lifts"
+            value="1"
+            id="input-lifts"
+          />
+        </div>
+        <button id="input-btn" class="control__button">Generate</button>
+      </form>
+    </section>
 
-    <footer>
-      <p>
-        Link for the Github
+    <hr class="divider" />
+
+    <div class="container" id="container"></div>
+
+    <hr class="divider" />
+
+    <footer class="footer">
+      <p class="footer__text">
+        Link for the GitHub Repository:
         <a
-          href="https://github.com/rohan09-raj/lift-simulation-rohan.git"
+          class="footer__link"
+          href="https://github.com/rohan09-raj/lift-simulation"
           target="_blank"
           rel="noopener noreferrer"
-          >repo</a
+          >Source Code</a
         >
       </p>
     </footer>
-
-    <script src="js/lift_mechanics.js"></script>
   </body>
+
+  <!-- Scripts -->
+  <script src="./js/index.js"></script>
 </html>
